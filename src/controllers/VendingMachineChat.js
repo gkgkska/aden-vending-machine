@@ -1,5 +1,5 @@
+import { DRINK_MAP } from '../constants/constants.js';
 import { VendingMachine } from '../viewModels/VendingMachineVM.js';
-import { drinkMap } from '../constants/constants.js';
 var VendingMachineChat = /** @class */ (function () {
     function VendingMachineChat() {
         this.machine = new VendingMachine();
@@ -109,8 +109,8 @@ var VendingMachineChat = /** @class */ (function () {
             if (!this.item) {
                 throw new Error('먼저 상품을 선택해주세요.');
             }
-            if (this.item in drinkMap) {
-                var result = this.machine.selectDrink(drinkMap[this.item]);
+            if (this.item in DRINK_MAP) {
+                var result = this.machine.selectDrink(DRINK_MAP[this.item]);
                 console.log('\n구매가 완료되었습니다.');
                 console.log("- \uC0C1\uD488: ".concat(this.item));
                 if (result.change !== undefined) {

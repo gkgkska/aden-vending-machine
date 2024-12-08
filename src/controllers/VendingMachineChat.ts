@@ -1,6 +1,6 @@
-import { VendingMachine } from '../viewModels/VendingMachineVM.js';
+import { DRINK_MAP } from '../constants/constants.js';
 import { PaymentMethod } from '../types/types.js';
-import { drinkMap } from '../constants/constants.js';
+import { VendingMachine } from '../viewModels/VendingMachineVM.js';
 
 export class VendingMachineChat {
     machine: VendingMachine;
@@ -122,8 +122,8 @@ export class VendingMachineChat {
                 throw new Error('먼저 상품을 선택해주세요.');
             }
 
-             if (this.item in drinkMap) {
-                const result = this.machine.selectDrink(drinkMap[this.item as keyof typeof drinkMap]);
+             if (this.item in DRINK_MAP) {
+                const result = this.machine.selectDrink(DRINK_MAP[this.item as keyof typeof DRINK_MAP]);
                 
                 console.log('\n구매가 완료되었습니다.');
                 console.log(`- 상품: ${this.item}`);

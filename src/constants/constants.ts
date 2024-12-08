@@ -8,7 +8,7 @@ export const INITIAL_INVENTORY: Inventory = {
 
 export const ALLOWED_CASH = [100, 500, 1000, 5000, 10000];
 
-export const drinkMap = {
+export const DRINK_MAP = {
     'coffee': 'coffee',
     '커피': 'coffee',
     'cola': 'cola', 

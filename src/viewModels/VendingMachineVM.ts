@@ -1,15 +1,15 @@
-import { DrinkInfo, Inventory, CardPaymentResult, PurchaseResult, InventoryItem, PaymentMethod } from '../types/types.js';
-import { INITIAL_INVENTORY, ALLOWED_CASH } from '../constants/constants.js';
+import { ALLOWED_CASH, INITIAL_INVENTORY } from '../constants/constants.js';
+import { CardPaymentResult, DrinkInfo, Inventory, InventoryItem, PaymentMethod, PurchaseResult } from '../types/types.js';
 
 export class VendingMachine {
-    inventory: Inventory;
     allowedCash: number[];
+    inventory: Inventory;
     insertedMoney: number;
     paymentMethod: PaymentMethod;
 
     constructor() {
-        this.inventory = { ...INITIAL_INVENTORY };
         this.allowedCash = ALLOWED_CASH;
+        this.inventory = { ...INITIAL_INVENTORY };
         this.insertedMoney = 0;
         this.paymentMethod = null;
     }
@@ -78,8 +78,8 @@ export class VendingMachine {
         drink.quantity--;
 
         return {
-            drink: drinkName,
             change,
+            drink: drinkName,
             remainingQuantity: drink.quantity,
             message: '현금 결제가 완료되었습니다.'
         };
@@ -90,8 +90,8 @@ export class VendingMachine {
         if (payment.success) {
             drink.quantity--;
             return {
-                drink: drinkName,
                 amount: payment.amount,
+                drink: drinkName,
                 remainingQuantity: drink.quantity,
                 message: payment.message
             };

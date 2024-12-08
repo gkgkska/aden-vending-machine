@@ -9,11 +9,11 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-import { INITIAL_INVENTORY, ALLOWED_CASH } from '../constants/constants.js';
+import { ALLOWED_CASH, INITIAL_INVENTORY } from '../constants/constants.js';
 var VendingMachine = /** @class */ (function () {
     function VendingMachine() {
-        this.inventory = __assign({}, INITIAL_INVENTORY);
         this.allowedCash = ALLOWED_CASH;
+        this.inventory = __assign({}, INITIAL_INVENTORY);
         this.insertedMoney = 0;
         this.paymentMethod = null;
     }
@@ -69,8 +69,8 @@ var VendingMachine = /** @class */ (function () {
         this.insertedMoney = 0;
         drink.quantity--;
         return {
-            drink: drinkName,
             change: change,
+            drink: drinkName,
             remainingQuantity: drink.quantity,
             message: '현금 결제가 완료되었습니다.'
         };
@@ -80,8 +80,8 @@ var VendingMachine = /** @class */ (function () {
         if (payment.success) {
             drink.quantity--;
             return {
-                drink: drinkName,
                 amount: payment.amount,
+                drink: drinkName,
                 remainingQuantity: drink.quantity,
                 message: payment.message
             };

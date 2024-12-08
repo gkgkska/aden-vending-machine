@@ -1,19 +1,25 @@
-export interface DrinkInfo {
-    price: number;
-    quantity: number;
-}
-
-export interface Inventory {
-    [key: string]: DrinkInfo;
-}
-
-export interface CardPaymentResult {
+interface CardPaymentResult {
     success: boolean;
     amount: number;
     message: string;
 }
 
-export interface PurchaseResult {
+interface DrinkInfo {
+    price: number;
+    quantity: number;
+}
+
+interface Inventory {
+    [key: string]: DrinkInfo;
+}
+
+interface InventoryItem {
+    name: string;
+    price: number;
+    quantity: number;
+}
+
+interface PurchaseResult {
     drink: string;
     change?: number;
     amount?: number;
@@ -21,10 +27,13 @@ export interface PurchaseResult {
     message: string;
 }
 
-export interface InventoryItem {
-    name: string;
-    price: number;
-    quantity: number;
-}
+type PaymentMethod = 'cash' | 'card' | null;
 
-export type PaymentMethod = 'cash' | 'card' | null;
+export {
+    CardPaymentResult,
+    DrinkInfo,
+    Inventory,
+    InventoryItem,
+    PurchaseResult,
+    PaymentMethod
+}

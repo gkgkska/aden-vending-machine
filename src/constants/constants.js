@@ -4,7 +4,7 @@ export var INITIAL_INVENTORY = {
     'coffee': { price: 700, quantity: 5 }
 };
 export var ALLOWED_CASH = [100, 500, 1000, 5000, 10000];
-export var drinkMap = {
+export var DRINK_MAP = {
     'coffee': 'coffee',
     '커피': 'coffee',
     'cola': 'cola',
