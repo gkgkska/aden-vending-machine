@@ -2,7 +2,7 @@
 자판기 로직과 제품 판매 프로세스를 타입스크립트 코드로 표현합니다.\
 Represent the vending machine logic and product serve process in Typescript code.
 
-![Architecture](./docs/sequence-diagram.png)
+![Architecture](./docs/sequence_diagram.png)
 
 ## 소개 (Introduction)
 TypeScript를 사용하여 자판기의 로직을 표현하는 커맨드 툴을 만들었습니다.\
