@@ -1,11 +1,11 @@
 # 자판기 동작원리 코드 과제
-자판기 로직과 제품 판매 프로세스를 타입스크립트 코드로 표현합니다.
+자판기 로직과 제품 판매 프로세스를 타입스크립트 코드로 표현합니다.\
 Represent the vending machine logic and product serve process in Typescript code.
 
 ![Architecture](./docs/sequence-diagram.png)
 
 ## 소개 (Introduction)
-TypeScript를 사용하여 자판기의 로직을 표현하는 커맨드 툴을 만들었습니다. 
+TypeScript를 사용하여 자판기의 로직을 표현하는 커맨드 툴을 만들었습니다.\
 단계별로 필요한 포인트를 접근하여 자판기가 물품을 판매하는 과정까지 구현해 보았습니다.
 
 ## 필수 조건 (Prerequisites)
