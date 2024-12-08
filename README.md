@@ -48,7 +48,7 @@ npm run watch
 ```
 프로젝트_루트/
 ├── docs/
-│   └── sequence-diagram.png
+│   └── sequence_diagram.png
 ├── public/
 │   └── index.html
 ├── src/
